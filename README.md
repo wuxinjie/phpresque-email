@@ -15,10 +15,10 @@ phpresque-email
 
 终端运行(这里Cli方式,也可以选择其它运行方式.):    
 
-1. 把邮件发送任务加入redis  
-   eg：    
+1. 把邮件发送任务加入redis    
+   eg：      
    php queue.php email "aaaaaaa@gmail.com" "hello" "how are you?"   
-   email指任务类别
+   * email指任务类别
    
 2. 启动处理进程        
    QUEUE=email,email1,email2 COUNT=5 INTERVAL=5 php resque.php      
@@ -26,7 +26,7 @@ phpresque-email
    * COUNT是处理进程数量
    * INTERVAL是处理进程检查队列的时间间隔
 
-3. 查看邮件发送状态
+3. 查看邮件发送状态  
    php check_status.php 66bcbe14bf6e142ffbe87fdcb15c7647
    * 66bcbe14bf6e142ffbe87fdcb15c7647 是任务ID
 
