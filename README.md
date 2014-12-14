@@ -17,12 +17,12 @@ phpresque-email
 
 1. 把邮件发送任务加入redis    
    eg：      
-   php queue.php email "aaaaaaa@gmail.com" "hello" "how are you?"   
+   php queue.php email "wuxinjie@gmail.com" "hello" "how are you?"   
    * email指任务类别
    
 2. 启动处理进程        
    QUEUE=email,email1,email2 COUNT=5 INTERVAL=5 php resque.php      
-   * QUEUE是任务的级别
+   * QUEUE是任务的优先级，却靠前优先级越高
    * COUNT是处理进程数量
    * INTERVAL是处理进程检查队列的时间间隔
 
