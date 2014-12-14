@@ -4,7 +4,8 @@ phpresque-email
 大批量邮件发送的处理方案
 -------
 
-基于php-resque开发，请先安装resque所需环境，并且把文件放到resque根目录
+基于php-resque开发，请先安装resque所需环境，并且把文件放到resque根目录    
+php-resque：https://github.com/chrisboulton/php-resque.git  
 
 邮件发送任务可以通过多种方式以消息队列的形式存储到redis中。  
 常驻后台的多个守护进程，随时监控消息队列，并且完成邮件的发送。  
