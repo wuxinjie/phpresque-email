@@ -15,8 +15,14 @@ if(!$status->isTracking()) {
 }
 
 echo "Tracking status of ".$argv[1].". Press [break] to stop.\n\n";
-
+$state="";
 while(true) {
-	fwrite(STDOUT, "Status of ".$argv[1]." is: ".$status->get()."\n");
+	switch($status->get()){
+		 case 1:$state="WAITING";break;
+		 case 2:$state="RUNNING";break;
+		 case 3:$state="FAILED";break;
+		 case 4:$state="SEND";break;
+	}
+	fwrite(STDOUT, "Status of ".$argv[1]." is: ".$state."\n");
 	sleep(1);
 }
